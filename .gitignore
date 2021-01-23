@@ -1,3 +1,4 @@
 excel_files/*.xlsm
 database/*.db
 resources/__pycache__/
+.log/*.json
