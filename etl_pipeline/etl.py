@@ -280,6 +280,7 @@ if __name__ == "__main__":
         with open(LOG_PATH, "r") as file:
             last_status = json.load(file)
             last_url = last_status["last_url"]
+            all_files = last_status["all_files"]
     else:
         last_url = []
         all_files = []
