@@ -1,2 +1,3 @@
 excel_files/*.xlsm
 database/*.db
+.log/*.json
