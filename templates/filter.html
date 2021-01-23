@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Power Grid Company of Bangladesh</title>
+        <link rel="stylesheet" href="/static/styles.css"/>
+    </head>
+<body>
+    <div>
+        <h1>Power Grid Company of Bangladesh</h1>
+        <h2>Query Data</h2>
+    </div>
+    <div>
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+    </div>
+</body>
+</html>

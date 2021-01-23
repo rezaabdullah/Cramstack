@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Power Grid Company of Bangladesh</title>
+        <link rel="stylesheet" href="/static/styles.css"/>
+    </head>
+    <body>
+        <div>
+            <h1>Power Grid Company of Bangladesh</h1>
+            <h2>Query Data</h2>
+        </div>
+        <div>
+            <h4>Instructions to Query Data</h4>
+            <p>To query data from local database, please follow the instructions below:</p>
+            <ul>
+                <li>In the Terminal (Linux/MacOS) or Command Prompt or Powershell (Windows) go to the project folder i.e. Cramstack</li>
+                <li>Enter run app.py</li>
+                <li>Open browser and in the address bar enter <a href="http://localhost:5000">http://localhost:5000</a> or <a href="http://127.0.0.1:5000">http://127.0.0.1:5000</a></li>
+                <li>To see all data, in the address bar enter <a href="http://localhost:5000/show_all">http://localhost:5000/show_all</a> or <a href="http://127.0.0.1:5000/show_all">http://127.0.0.1:5000/show_all</a></li>
+                <li>To filter data, in the address bar enter <a herf="http://localhost:5000/filter?&lt;query_parameter(s)&gt;">http://localhost:5000/filter?&lt;query_parameter(s)&gt;</a></li>
+                <li>Multiple query parameters are allowed and must be separated by &amp;</li>
+            </ul>
+            <h4>Allowable Query Parameters</h4>
+            <p>List of allowable query parameters and examples are given below:</p>
+            <ul>
+                <li>total_capacity: <b>Numeric</b></li>
+                <li>prev_day_power_gen_peak: <b>Numeric</b></li>
+                <li>prev_ev_power_gen_peak: <b>Numeric</b></li>
+                <li>current_day_forecast_peak: <b>Numeric</b></li>
+                <li>current_ev_forecast_peak: <b>Numeric</b></li>
+                <li>gen_short_fuel: <b>Numeric</b></li>
+                <li>gen_short_plant_issue: <b>Numeric</b></li>
+                <li>power_station_name: <b>String</b></li>
+                <li>fuel_type: <b>String</b></li>
+                <li>producer: <b>String</b></li>
+                <li>install_capacity: <b>String</b></li>
+                <li>return_date: <b>String</b></li>
+                <li>maintenance_remark: <b>String</b></li>
+                <li>start_up_date: <b>String</b></li>
+            </ul>
+            <p><b>Example:</b>
+                <ul>
+                    <li>To filter data with total_capacity of 110 and current_capacity below 100: <a href="http://localhost:5000/filter?total_capacity=100&amp;current_capacity=lt100">http://localhost:5000/filter?total_capacity=100&amp;current_capacity=lt100</a></li>
+                    <li>To filter data with total_capacity of over 500 and power_station_name matching with Bheramara (HVDC) wtih match threshold over 70: <a href="http://localhost:5000/filter?total_capacity=gt500&amp;power_station_name=Bheramara(HVDC)_70">http://localhost:5000/filter?total_capacity=gt500&power_station_name=Bheramara%20(HVDC)_70</a></li>
+                </ul>
+            </p>
+        </div>
+    </body>
+</html>
